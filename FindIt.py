@@ -5,7 +5,7 @@ SCREEN_HEIGHT = 0
 
 
 
-
+print("I <3 Computer Programming!!! 8=======D-----")
 
 
 class FindGame(App):
@@ -17,6 +17,6 @@ class FindGame(App):
         #for x in range(self.width//512 + 1):
             #for y in range(self.height//512 + 1):
                 #Sprite(asset,(x*512, y*512))
-"
+
 myapp = FindGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
