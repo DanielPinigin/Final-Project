@@ -1,6 +1,7 @@
-# Title of Your Project Here
-
-
+# Find It!
+Inspired from the games such as "Spinny Phone" and "Bop It", "Find It!" is a game were in the time allotted, the user will have to find and press random keys on their computer within a short amount of time, and every stage they pass, the time to find the keys will get shorter and combinations will grow more complicated.
+The app will run through ggame in http://runpython.com.
+The user will see an opening screen asking them to click "start" when ready after which a countdown will comence. Once the countdown finishes, the first randomly generated prompt will be given to the user to type out. After they type out thei given prompt, they will hit "return" to submit their response. If the user completes submits the correct response, they will be moved to the next stage where the time to give the response will be shortened and/or the necessary combination will be increased in characters. Besides clicking the "start" and "Try again" button, the mouse will not be used. The keyboard will be used to submit responses through the app to answer the prompts. Graphic assets will be used for opening, transitioning, and closing screens. The user, idealy, will not have to install anything into their computer in order to run the program.
 
 ## Functional Specification
 
@@ -10,6 +11,7 @@ A functional specification describes in great detail how a device or program wil
 outside user. That is, it treats all hardware as a "black box", the contents of which are completely
 unknown to the user. The functional specification should include sections with the following information:
 
+"Find It!"
 Your specification **should include** the following types of information:
 
 * A title. Replace the title at the beginning of this document.
