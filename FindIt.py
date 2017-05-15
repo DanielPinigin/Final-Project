@@ -5,7 +5,7 @@ SCREEN_HEIGHT = 0
 
 
 
-print("I <3 Computer Programming!!! 8=======D-----")
+print("I <3 Computer Programming!!!")
 
 
 class FindGame(App):
