@@ -13,10 +13,10 @@ class FindGame(App):
         super().__init__(width, height)
         black = Color(0, 1)
         noline = LineStyle(0, black)
-        asset = ImageAsset("lol.jpg")
-        for x in range(self.width//2560 + 1):
-            for y in range(self.height//1600 + 1):
-                Sprite(asset,(x*2560, y*1600))
+        asset = ImageAsset("lel.jpg")
+        for x in range(self.width//600 + 1):
+            for y in range(self.height//600 + 1):
+                Sprite(asset,(x*600, y*600))
 
 myapp = FindGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
