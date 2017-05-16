@@ -34,7 +34,7 @@ class Sun(Sprite):
         self.x += self.vx
         self.y += self.vy
     def Speed(self, event):
-        self.vx += 500
+        self.vx += 5
 class FindGame(App):
     def __init__(self, width, height):
         super().__init__(width, height)
