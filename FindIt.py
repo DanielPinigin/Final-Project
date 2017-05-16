@@ -29,12 +29,12 @@ class Sun(Sprite):
         self.vx = 0.5
         self.vy = 0.9
         self.circularCollisionModel()
-        FindGame.listenKeyEvent("keydown", "m", self.Speed)
+        FindGame.listenKeyEvent("keydown", "w", self.Speed)
     def step(self):
         self.x += self.vx
         self.y += self.vy
     def Speed(self, event):
-        self.vx += 5000000000000
+        self.vx += 50
 class FindGame(App):
     def __init__(self, width, height):
         super().__init__(width, height)
