@@ -27,6 +27,6 @@ class FindGame(App):
         for x in range(self.width//512 + 1):
             for y in range(self.height//512 + 1):
                 Sprite(asset,(x*512, y*512))
-            Spaceship((.5*(self.width//512+1)*512,.5*(self.height//512+1)*512))
+            Spaceship((.5*(self.width//512+1)*512,.5*(self.height//512+1)*512-90))
 myapp = FindGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
