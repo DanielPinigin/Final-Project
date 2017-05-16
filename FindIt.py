@@ -18,7 +18,7 @@ class Spaceship(Sprite):
         
 class Sun(Sprite):
     
-    asset = ImageAsset("sun.png")
+    asset = ImageAsset("images/sun.png")
     width = 80
     height = 76
     
@@ -26,8 +26,12 @@ class Sun(Sprite):
         super().__init__(Sun.asset, position)
         self.fxcenter = 0.5
         self.fycenter = 0.5
+        self.vx = 0.5
+        self.vy = 0.9
         self.circularCollisionModel()
-    
+    def step(self):
+        self.x += self.vx
+        self.y += self.vy
 class FindGame(App):
     def __init__(self, width, height):
         super().__init__(width, height)
@@ -38,6 +42,8 @@ class FindGame(App):
             for y in range(self.height//512 + 1):
                 Sprite(asset,(x*512, y*512))
             Spaceship((.5*(self.width//512+1)*512,.5*(self.height//512+1)*512-90))
-            Sun(100,100)
+            Sun((100,100))
+    def step(self):
+        
 myapp = FindGame(SCREEN_WIDTH, SCREEN_HEIGHT)
 myapp.run()
