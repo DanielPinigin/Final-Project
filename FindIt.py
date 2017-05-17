@@ -23,7 +23,7 @@ class Sun(Sprite):
     width = 80
     height = 76
     
-    def __init__(self, (x,y)):
+    def __init__(self, position):
         self.x = random.randint(0,myapp.width)
         self.y = random.randint(0,myapp.height)
         super().__init__(Sun.asset, position)
@@ -55,9 +55,10 @@ class FindGame(App):
             for y in range(self.height//512 + 1):
                 Sprite(asset,(x*512, y*512))
             Spaceship((.5*(self.width//512+1)*512,.5*(self.height//512+1)*512-90))
-            Sun((100,100))
+            
     def step(self):
         for asset in self.getSpritesbyClass(Sun):
             asset.step()
 myapp = FindGame(SCREEN_WIDTH, SCREEN_HEIGHT)
+Sun((100,100))
 myapp.run()
