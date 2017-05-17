@@ -33,8 +33,8 @@ class Sun(Sprite):
     def step(self):
         self.x += self.vx
         self.y += self.vy
-        if self.x+self.vx > self.width//512+1
-            set self.x = 0
+        if self.x+self.vx > myapp.width:
+            self.x = 0
     def Speed(self, event):
         self.vx += 5
     
