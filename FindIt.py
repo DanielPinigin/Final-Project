@@ -1,5 +1,6 @@
 #Impot ggame stuff
-from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
+import random
+from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame,
 SCREEN_WIDTH = 0
 SCREEN_HEIGHT = 0
 
@@ -23,6 +24,8 @@ class Sun(Sprite):
     height = 76
     
     def __init__(self, position):
+        self.x = 
+        slef.y = 
         super().__init__(Sun.asset, position)
         self.fxcenter = 0.5
         self.fycenter = 0.5
