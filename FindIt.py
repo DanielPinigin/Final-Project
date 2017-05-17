@@ -1,6 +1,6 @@
 #Impot ggame stuff
 import random
-from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame,
+from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 SCREEN_WIDTH = 0
 SCREEN_HEIGHT = 0
 
