@@ -24,9 +24,9 @@ class Sun(Sprite):
     height = 76
     
     def __init__(self, position):
+        super().__init__(Sun.asset, position)
         self.x = random.randint(0,myapp.width)
         self.y = random.randint(0,myapp.height)
-        super().__init__(Sun.asset, position)
         self.fxcenter = 0.5
         self.fycenter = 0.5
         self.vx = 3.5
