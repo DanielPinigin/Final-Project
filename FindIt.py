@@ -33,10 +33,15 @@ class Sun(Sprite):
     def step(self):
         self.x += self.vx
         self.y += self.vy
+        if self.x+self.vx > self.width//512+1
+            set self.x = 0
     def Speed(self, event):
         self.vx += 5
+    
 class FindGame(App):
     def __init__(self, width, height):
+        self.width=width
+        self.height=height
         super().__init__(width, height)
         black = Color(0, 1)
         noline = LineStyle(0, black)
