@@ -1,9 +1,9 @@
 #Impot ggame stuff
 """
-import images of either letters or words for the sun sprites to use
-make it so when sun is destroyed, two others spawn
-Create life sprites in top left corner
-Create collisions between sun and spaceship preferabbly after 7s
+Find Sprite Images of letters
+Find bright background color
+When you type a letter, first checks if that is the correct letter in the list
+
 """
 import random
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
