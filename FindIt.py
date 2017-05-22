@@ -77,7 +77,6 @@ class FindGame(App):
     FindGame.listenKeyEvent("keydown", "b", bkey)
     FindGame.listenKeyEvent("keydown", "n", nkey)
     FindGame.listenKeyEvent("keydown", "m", mkey)
-    FindGame.listenKeyEvent("keydown", "/", /key)
     def __init__(self, width, height):
         self.width=width
         self.height=height
