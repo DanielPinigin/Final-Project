@@ -1,4 +1,10 @@
 #Impot ggame stuff
+"""
+Assign all keys to an event for later
+import images of either letters or words for the sun sprites to use
+make it so when sun is destroyed, two others spawn
+
+"""
 import random
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
 SCREEN_WIDTH = 0
