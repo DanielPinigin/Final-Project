@@ -1,9 +1,9 @@
 #Impot ggame stuff
 """
-Assign all keys to an event for later
 import images of either letters or words for the sun sprites to use
 make it so when sun is destroyed, two others spawn
-
+Create life sprites in top left corner
+Create collisions between sun and spaceship preferabbly after 7s
 """
 import random
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
@@ -50,6 +50,35 @@ class Sun(Sprite):
         self.vs += 0.5
 
 class FindGame(App):
+    FindGame.listenKeyEvent("keydown", "q", key)
+    FindGame.listenKeyEvent("keydown", "w", wkey)
+    FindGame.listenKeyEvent("keydown", "e", ekey)
+    FindGame.listenKeyEvent("keydown", "r", rkey)
+    FindGame.listenKeyEvent("keydown", "t", tkey)
+    FindGame.listenKeyEvent("keydown", "y", ykey)
+    FindGame.listenKeyEvent("keydown", "u", ukey)
+    FindGame.listenKeyEvent("keydown", "i", ikey)
+    FindGame.listenKeyEvent("keydown", "o", okey)
+    FindGame.listenKeyEvent("keydown", "p", pkey)
+    FindGame.listenKeyEvent("keydown", "w", wkey)
+    FindGame.listenKeyEvent("keydown", "a", akey)
+    FindGame.listenKeyEvent("keydown", "s", skey)
+    FindGame.listenKeyEvent("keydown", "d", dkey)
+    FindGame.listenKeyEvent("keydown", "f", fkey)
+    FindGame.listenKeyEvent("keydown", "g", gkey)
+    FindGame.listenKeyEvent("keydown", "h", hkey)
+    FindGame.listenKeyEvent("keydown", "j", jkey)
+    FindGame.listenKeyEvent("keydown", "k", kkey)
+    FindGame.listenKeyEvent("keydown", "l", lkey)
+    FindGame.listenKeyEvent("keydown", ";", ;key)
+    FindGame.listenKeyEvent("keydown", "z", zkey)
+    FindGame.listenKeyEvent("keydown", "x", xkey)
+    FindGame.listenKeyEvent("keydown", "c", ckey)
+    FindGame.listenKeyEvent("keydown", "v", vkey)
+    FindGame.listenKeyEvent("keydown", "b", bkey)
+    FindGame.listenKeyEvent("keydown", "n", nkey)
+    FindGame.listenKeyEvent("keydown", "m", mkey)
+    FindGame.listenKeyEvent("keydown", "/", /key)
     def __init__(self, width, height):
         self.width=width
         self.height=height
