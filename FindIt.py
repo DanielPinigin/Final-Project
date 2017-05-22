@@ -70,7 +70,6 @@ class FindGame(App):
     FindGame.listenKeyEvent("keydown", "j", jkey)
     FindGame.listenKeyEvent("keydown", "k", kkey)
     FindGame.listenKeyEvent("keydown", "l", lkey)
-    FindGame.listenKeyEvent("keydown", ";", ;key)
     FindGame.listenKeyEvent("keydown", "z", zkey)
     FindGame.listenKeyEvent("keydown", "x", xkey)
     FindGame.listenKeyEvent("keydown", "c", ckey)
