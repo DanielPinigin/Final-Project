@@ -14,8 +14,10 @@ class quest(Sprite):
     asset = ImageAsset("images/coollogo_com-23243960.png")
     width = 70
     height = 50
+    def __init__(self, position):
+        super().__init__(quest.asset, position)
 class FindGame(App):
-    FindGame.listenKeyEvent("keydown", "q", key)
+    FindGame.listenKeyEvent("keydown", "q", qkey)
     FindGame.listenKeyEvent("keydown", "w", wkey)
     FindGame.listenKeyEvent("keydown", "e", ekey)
     FindGame.listenKeyEvent("keydown", "r", rkey)
@@ -53,5 +55,5 @@ class FindGame(App):
             for y in range(self.height//512 + 1):
                 Sprite(asset,(x*512, y*512))
 myapp = FindGame(SCREEN_WIDTH, SCREEN_HEIGHT)
-quest ((100,100))
+quest((100,100))
 myapp.run()
