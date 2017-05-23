@@ -12,7 +12,8 @@ SCREEN_HEIGHT = 0
 
 class quest(Sprite):
     asset = ImageAsset("images/coollogo_com-23243960.png")
-
+    width = 70
+    height = 50
 class FindGame(App):
     FindGame.listenKeyEvent("keydown", "q", key)
     FindGame.listenKeyEvent("keydown", "w", wkey)
