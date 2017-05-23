@@ -3,6 +3,7 @@
 Find Sprite Images of letters
 Find bright background color
 When you type a letter, first checks if that is the correct letter in the list
+http://www5.flamingtext.com/All-Logos
     FindGame.listenKeyEvent("keydown", "q", qkey)
     FindGame.listenKeyEvent("keydown", "w", wkey)
     FindGame.listenKeyEvent("keydown", "e", ekey)
@@ -54,7 +55,7 @@ class FindGame(App):
 myapp = FindGame(0,0)
 
 class quest(Sprite):
-    asset = ImageAsset("images/coollogo_com-23243960.png")
+    asset = ImageAsset("coollogo_com-31357268.png")
     width = 70
     height = 50
     def __init__(self, position):
@@ -67,5 +68,5 @@ class quest(Sprite):
         self.vy = 0.9
         self.circularCollisionModel()
         
-quest((100,100))
+quest((150,100))
 myapp.run()
