@@ -58,8 +58,8 @@ class quest(Sprite):
     height = 50
     def __init__(self, position):
         super().__init__(quest.asset, position)
-        self.x = random.randint(0,self.width)
-        self.y = random.randint(0,self.height)
+        self.x = random.randint(0,SCREEN_WIDTH)
+        self.y = random.randint(0,SCREEN_HEIGHT)
         self.fxcenter = 0.5
         self.fycenter = 0.5
         self.vx = 3.5
