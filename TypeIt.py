@@ -51,7 +51,7 @@ class FindGame(App):
         global SCREEN_WIDTH,SCREEN_HEIGHT
         SCREEN_WIDTH = self.width
         SCREEN_HEIGHT = self.height
-
+myapp = FindGame(0,0)
 class quest(Sprite):
     asset = ImageAsset("images/coollogo_com-23243960.png")
     width = 70
@@ -66,6 +66,6 @@ class quest(Sprite):
         self.vy = 0.9
         self.circularCollisionModel()
 
-myapp = FindGame(0,0)
+
 quest((100,100))
 myapp.run()
