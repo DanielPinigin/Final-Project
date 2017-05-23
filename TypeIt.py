@@ -16,6 +16,13 @@ class quest(Sprite):
     height = 50
     def __init__(self, position):
         super().__init__(quest.asset, position)
+        self.x = random.randint(0,myapp.width)
+        self.y = random.randint(0,myapp.height)
+        self.fxcenter = 0.5
+        self.fycenter = 0.5
+        self.vx = 3.5
+        self.vy = 0.9
+        self.circularCollisionModel()
 class FindGame(App):
     FindGame.listenKeyEvent("keydown", "q", qkey)
     FindGame.listenKeyEvent("keydown", "w", wkey)
