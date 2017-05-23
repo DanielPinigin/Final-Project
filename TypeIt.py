@@ -50,21 +50,22 @@ class FindGame(App):
         global SCREEN_WIDTH,SCREEN_HEIGHT
         SCREEN_WIDTH = self.width
         SCREEN_HEIGHT = self.height
+        
 myapp = FindGame(0,0)
+
 class quest(Sprite):
     asset = ImageAsset("images/coollogo_com-23243960.png")
     width = 70
     height = 50
     def __init__(self, position):
         super().__init__(quest.asset, position)
-        self.x = random.randint(0,SCREEN_WIDTH)
-        self.y = random.randint(0,SCREEN_HEIGHT)
+        #self.x = random.randint(0,SCREEN_WIDTH)
+        #self.y = random.randint(0,SCREEN_HEIGHT)
         self.fxcenter = 0.5
         self.fycenter = 0.5
         self.vx = 3.5
         self.vy = 0.9
         self.circularCollisionModel()
-    
-
-
+        
+quest((100,100))
 myapp.run()
