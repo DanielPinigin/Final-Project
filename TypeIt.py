@@ -10,6 +10,9 @@ from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Fra
 SCREEN_WIDTH = 0
 SCREEN_HEIGHT = 0
 
+class quest(Sprite):
+    asset = ImageAsset("images/coollogo_com-23243960.png")
+
 class FindGame(App):
     FindGame.listenKeyEvent("keydown", "q", key)
     FindGame.listenKeyEvent("keydown", "w", wkey)
@@ -49,5 +52,5 @@ class FindGame(App):
             for y in range(self.height//512 + 1):
                 Sprite(asset,(x*512, y*512))
 myapp = FindGame(SCREEN_WIDTH, SCREEN_HEIGHT)
-
+quest ((100,100))
 myapp.run()
