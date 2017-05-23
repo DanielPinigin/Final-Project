@@ -10,19 +10,6 @@ from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Fra
 SCREEN_WIDTH = 0
 SCREEN_HEIGHT = 0
 
-class quest(Sprite):
-    asset = ImageAsset("images/coollogo_com-23243960.png")
-    width = 70
-    height = 50
-    def __init__(self, position):
-        super().__init__(quest.asset, position)
-        self.x = random.randint(0,myapp.width)
-        self.y = random.randint(0,myapp.height)
-        self.fxcenter = 0.5
-        self.fycenter = 0.5
-        self.vx = 3.5
-        self.vy = 0.9
-        self.circularCollisionModel()
 class FindGame(App):
     FindGame.listenKeyEvent("keydown", "q", qkey)
     FindGame.listenKeyEvent("keydown", "w", wkey)
@@ -61,6 +48,23 @@ class FindGame(App):
         for x in range(self.width//512 + 1):
             for y in range(self.height//512 + 1):
                 Sprite(asset,(x*512, y*512))
-myapp = FindGame(SCREEN_WIDTH, SCREEN_HEIGHT)
+        SCREEN_WIDTH = self.width
+        SCREEN_HEIGHT = self.height
+
+class quest(Sprite):
+    asset = ImageAsset("images/coollogo_com-23243960.png")
+    width = 70
+    height = 50
+    def __init__(self, position):
+        super().__init__(quest.asset, position)
+        self.x = random.randint(0,myapp.width)
+        self.y = random.randint(0,myapp.height)
+        self.fxcenter = 0.5
+        self.fycenter = 0.5
+        self.vx = 3.5
+        self.vy = 0.9
+        self.circularCollisionModel()
+
+myapp = FindGame(0,0)
 quest((100,100))
 myapp.run()
