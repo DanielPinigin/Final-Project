@@ -68,5 +68,5 @@ class quest(Sprite):
         self.vy = 0.9
         self.circularCollisionModel()
         
-quest((150,100))
+quest((712,452))
 myapp.run()
