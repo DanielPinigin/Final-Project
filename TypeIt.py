@@ -72,13 +72,7 @@ class quest(Sprite):
     height = 50
     def __init__(self, position):
         super().__init__(quest.asset, position)
-        #self.x = random.randint(0,SCREEN_WIDTH)
-        #self.y = random.randint(0,SCREEN_HEIGHT)
-        self.fxcenter = 0.5
-        self.fycenter = 0.5
-        self.vx = 3.5
-        self.vy = 0.9
-        self.circularCollisionModel()
+        quest1 = ["q", "u", "e", "s", "t"]
         
-quest((712,452))
+quest((612,382))
 myapp.run()
