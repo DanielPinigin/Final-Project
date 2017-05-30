@@ -56,6 +56,11 @@ class FindGame(App):
         
 myapp = FindGame(0,0)
 
+class checker(Sprite):
+    asset = ImageAsset("green-dot-hi.png")
+    width = 50
+    height = 50
+    
 class quest(Sprite):
     asset = ImageAsset("coollogo_com-31357268.png")
     width = 70
@@ -71,4 +76,5 @@ class quest(Sprite):
         self.circularCollisionModel()
         
 quest((712,452))
+checker((512,512))
 myapp.run()
