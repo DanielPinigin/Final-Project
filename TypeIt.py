@@ -1,9 +1,12 @@
 #Impot ggame stuff
 """
 Make Sprite which shows how many characters you've gotten correct of the word so far
-
-Find Sprite Images of letters
-Find bright background color
+When an image is displayed, it requires the user to type its characters
+the characters must be typed in order that appear in the list of that word
+if the incorrect character is typed, reset all progress on the current word
+every time you type the correct character in the list, a green dot sprite will be created on the screen, 
+one for each character
+once the user types all the characters, the image is changed to the next image and demands that a new list is typed
 When you type a letter, first checks if that is the correct letter in the list
 http://www5.flamingtext.com/All-Logos
     FindGame.listenKeyEvent("keydown", "q", qkey)
