@@ -60,7 +60,11 @@ class checker(Sprite):
     asset = ImageAsset("green-dot-hi.png")
     width = 50
     height = 50
-    
+    def __init__(self, position):
+        super().__init__(quest.asset, position)
+        #self.x = random.randint(0,SCREEN_WIDTH)
+        #self.y = random.randint(0,SCREEN_HEIGHT)
+       
 class quest(Sprite):
     asset = ImageAsset("coollogo_com-31357268.png")
     width = 70
