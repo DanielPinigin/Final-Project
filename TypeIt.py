@@ -61,7 +61,7 @@ class checker(Sprite):
     width = 50
     height = 50
     def __init__(self, position):
-        super().__init__(quest.asset, position)
+        super().__init__(checker.asset, position)
         #self.x = random.randint(0,SCREEN_WIDTH)
         #self.y = random.randint(0,SCREEN_HEIGHT)
        
