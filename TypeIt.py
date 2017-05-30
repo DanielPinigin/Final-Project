@@ -1,5 +1,7 @@
 #Impot ggame stuff
 """
+Make Sprite which shows how many characters you've gotten correct of the word so far
+
 Find Sprite Images of letters
 Find bright background color
 When you type a letter, first checks if that is the correct letter in the list
