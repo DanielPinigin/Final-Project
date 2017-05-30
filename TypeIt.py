@@ -64,6 +64,7 @@ class checker(Sprite):
         super().__init__(checker.asset, position)
         #self.x = random.randint(0,SCREEN_WIDTH)
         #self.y = random.randint(0,SCREEN_HEIGHT)
+        self.scale = .05
        
 class quest(Sprite):
     asset = ImageAsset("coollogo_com-31357268.png")
@@ -80,5 +81,4 @@ class quest(Sprite):
         self.circularCollisionModel()
         
 quest((712,452))
-checker((512,512))
 myapp.run()
