@@ -38,10 +38,13 @@ http://www5.flamingtext.com/All-Logos
     FindGame.listenKeyEvent("keydown", "m", mkey)
 """
 import random
-from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame
+from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame, TextAsset
 SCREEN_WIDTH = 0
 SCREEN_HEIGHT = 0
-
+a= 'QuESt'
+b = list(a)
+print(b)
+Quest=TextAsset(a, style='200px Arial')
 class FindGame(App):
     def __init__(self, width, height):
         self.width=width
@@ -70,12 +73,12 @@ class checker(Sprite):
         self.scale = .05
        
 class quest(Sprite):
-    asset = ImageAsset("coollogo_com-31357268.png")
+    asset = Quest
     width = 70
     height = 50
     def __init__(self, position):
         super().__init__(quest.asset, position)
-        quest1 = ["q", "u", "e", "s", "t"]
+        quest1 = b
         
-quest((612,382))
+quest((612,342))
 myapp.run()
