@@ -45,15 +45,20 @@ from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Fra
 SCREEN_WIDTH = 0
 SCREEN_HEIGHT = 0
 a= random.choice('abcdefghijklmnopqrstuvwxyz')
+wordList = []
 def createWord():
-    wordList=[]
+    global wordList
     wordList.append(random.choice('abcdefghijklmnopqrstuvwxyz'))
-for _ in range(5):
+    print(wordList)
+def createWord2():
+    global wordList
+    wordList=[]
+    for _ in range(5):
         createWord()
-print(wordList)
+    print(wordList)
 b = list(a)
-print(b)
-Quest=TextAsset(a, style='200px Arial')
+createWord2()
+Quest=TextAsset(wordList, style='200px Arial')
 class FindGame(App):
     def __init__(self, width, height):
         self.width=width
