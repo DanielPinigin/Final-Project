@@ -36,12 +36,21 @@ http://www5.flamingtext.com/All-Logos
     FindGame.listenKeyEvent("keydown", "b", bkey)
     FindGame.listenKeyEvent("keydown", "n", nkey)
     FindGame.listenKeyEvent("keydown", "m", mkey)
+    random.choice(['a','b', etc])
+    for _ in range(5):
+        create()
 """
 import random
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame, TextAsset
 SCREEN_WIDTH = 0
 SCREEN_HEIGHT = 0
-a= 'QuESt'
+a= random.choice('abcdefghijklmnopqrstuvwxyz')
+def createWord():
+    wordList=[]
+    wordList.append(random.choice('abcdefghijklmnopqrstuvwxyz'))
+for _ in range(5):
+        createWord()
+print(wordList)
 b = list(a)
 print(b)
 Quest=TextAsset(a, style='200px Arial')
