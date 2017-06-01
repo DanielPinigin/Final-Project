@@ -8,7 +8,9 @@ every time you type the correct character in the list, a green dot sprite will b
 one for each character
 once the user types all the characters, the image is changed to the next image and demands that a new list is typed
 When you type a letter, first checks if that is the correct letter in the list
-http://www5.flamingtext.com/All-Logos
+See if you can do time so player has 60s to get as far as possible
+find way to center text as word increases in size
+getthetime
     FindGame.listenKeyEvent("keydown", "q", qkey)
     FindGame.listenKeyEvent("keydown", "w", wkey)
     FindGame.listenKeyEvent("keydown", "e", ekey)
