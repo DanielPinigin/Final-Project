@@ -56,6 +56,7 @@ def createWord2():
     for _ in range(5):
         createWord()
     print(wordList)
+    Q
 b = list(a)
 createWord2()
 Quest=TextAsset(wordList, style='200px Arial')
