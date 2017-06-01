@@ -53,12 +53,14 @@ def createWord():
 def createWord2():
     global wordList
     wordList=[]
-    for _ in range(5):
+    
+    for _ in range(10):
         createWord()
+    wordList= ("".join(wordList))
     print(wordList)
 b = list(a)
 createWord2()
-Quest=TextAsset(wordList, style='200px Arial')
+Quest=TextAsset(wordList, style='150px Arial')
 class FindGame(App):
     def __init__(self, width, height):
         self.width=width
