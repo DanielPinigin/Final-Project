@@ -10,7 +10,7 @@ once the user types all the characters, the image is changed to the next image a
 When you type a letter, first checks if that is the correct letter in the list
 See if you can do time so player has 60s to get as far as possible
 find way to center text as word increases in size
-getthetime
+time.time() the number of seconds since january 1970
     FindGame.listenKeyEvent("keydown", "q", qkey)
     FindGame.listenKeyEvent("keydown", "w", wkey)
     FindGame.listenKeyEvent("keydown", "e", ekey)
@@ -42,7 +42,7 @@ getthetime
     for _ in range(5):
         create()
 """
-import random
+import random, time
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame, TextAsset
 SCREEN_WIDTH = 0
 SCREEN_HEIGHT = 0
