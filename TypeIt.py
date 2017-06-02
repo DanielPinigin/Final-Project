@@ -55,6 +55,8 @@ def createWord():
 def createWord2():
     global wordList
     wordList=[]
+def createtimer():
+    print(60)
     
     for _ in range(10):
         createWord()
@@ -79,7 +81,10 @@ class FindGame(App):
         SCREEN_HEIGHT = self.height
         
 myapp = FindGame(0,0)
-
+startTime = time.time()
+class timer(Sprite):
+    if time.time()-startTime>1
+        createtimer()
 class checker(Sprite):
     asset = ImageAsset("green-dot-hi.png")
     width = 50
