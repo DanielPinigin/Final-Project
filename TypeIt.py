@@ -83,7 +83,8 @@ class FindGame(App):
 myapp = FindGame(0,0)
 startTime = time.time()
 class timer(Sprite):
-    if time.time()-startTime>1
+    Asset = TextAsset(60, style='150px Arial')
+    if time.time()-startTime>1:
         createtimer()
 class checker(Sprite):
     asset = ImageAsset("green-dot-hi.png")
