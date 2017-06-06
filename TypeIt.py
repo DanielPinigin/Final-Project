@@ -55,8 +55,6 @@ def createWord():
 def createWord2():
     global wordList
     wordList=[]
-def createtimer():
-    print(60)
     
     for _ in range(10):
         createWord()
@@ -64,7 +62,7 @@ def createtimer():
     print(wordList)
 b = list(a)
 createWord2()
-Quest=TextAsset(wordList, style='150px Arial')
+Quest=TextAsset(wordList, style='100px Arial')
 class FindGame(App):
     def __init__(self, width, height):
         self.width=width
@@ -82,10 +80,15 @@ class FindGame(App):
         
 myapp = FindGame(0,0)
 startTime = time.time()
-class timer(Sprite):
-    Asset = TextAsset(60, style='150px Arial')
-    if time.time()-startTime>1:
-        x = createtimer()
+class Timer(Sprite):
+    def __init__(self, startvalue, position, expired func):
+        self.startvalue = startvalue
+        self.starttime = time.time()
+        <Create TextAsset for startvalue>
+        <Call super__init__(position) with that asset>
+        self.expired = expiredvalue
+        "{0}":format(60)
+        
 class checker(Sprite):
     asset = ImageAsset("green-dot-hi.png")
     width = 50
@@ -95,7 +98,7 @@ class checker(Sprite):
         #self.x = random.randint(0,SCREEN_WIDTH)
         #self.y = random.randint(0,SCREEN_HEIGHT)
         self.scale = .05
-       
+    
 class quest(Sprite):
     asset = Quest
     width = 70
@@ -105,4 +108,10 @@ class quest(Sprite):
         quest1 = b
         
 quest((612,342))
-myapp.run()
+checker((100,100))
+
+def done():
+    print('Timer Expired!')
+    
+timer = Timer(60,(50,50), done)
+myapp.run(timer.step)
