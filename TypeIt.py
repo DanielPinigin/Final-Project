@@ -94,7 +94,8 @@ class Timer(Sprite):
             if slef.startvalue == 1:
                 self.expire()
             else:
-                Timer() self destroy()
+                Timer() 
+            self.destroy()
 class checker(Sprite):
     asset = ImageAsset("green-dot-hi.png")
     width = 50
