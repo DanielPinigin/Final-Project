@@ -81,10 +81,10 @@ class FindGame(App):
 myapp = FindGame(0,0)
 startTime = time.time()
 class Timer(Sprite):
-    def __init__(self, startvalue, position, expired func):
+    def __init__(self, startvalue, position, expired):
         self.startvalue = startvalue
         self.starttime = time.time()
-        <Create TextAsset for startvalue>
+        startvalue = TextAsset(60, style='50px Arial')
         <Call super__init__(position) with that asset>
         self.expired = expiredvalue
         "{0}":format(60)
