@@ -83,7 +83,6 @@ startTime = time.time()
 class Timer(Sprite):
     def __init__(self, startvalue, position, expired):
         self.startvalue = startvalue
-        self.position = position
         self.starttime = time.time()
         startasset = TextAsset("{0}".format(startvalue), style='50px Arial')
         super.__init__(startasset,position)
