@@ -83,18 +83,19 @@ startTime = time.time()
 class Timer(Sprite):
     def __init__(self, startvalue, position, expired):
         self.startvalue = startvalue
+        slef.position = position
         self.starttime = time.time()
         startasset = TextAsset("{0}".format(startvalue), style='50px Arial')
         super.__init__(startasset,position)
-        self.expired = expiredvalue
+        self.expired = expired
         "{0}".format(startvalue)
     
     def step(self):
         if time.timer() > self.starttime+1:
-            if slef.startvalue == 1:
+            if self.startvalue == 1:
                 self.expire()
             else:
-                Timer() 
+                Timer(self.startvalue-1,self.position,self.expired)
             self.destroy()
 class checker(Sprite):
     asset = ImageAsset("green-dot-hi.png")
