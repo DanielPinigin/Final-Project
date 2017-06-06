@@ -84,10 +84,10 @@ class Timer(Sprite):
     def __init__(self, startvalue, position, expired):
         self.startvalue = startvalue
         self.starttime = time.time()
-        startasset = TextAsset(startvalue, style='50px Arial')
+        startasset = TextAsset("{0}".format(startvalue), style='50px Arial')
         super.__init__(startasset,position)
         self.expired = expiredvalue
-        "{0}":format(60)
+        "{0}".format(startvalue)
     
     def step(self):
         if time.timer() > self.starttime+1:
