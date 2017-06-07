@@ -119,6 +119,7 @@ checker((100,100))
 
 def done():
     print('Timer Expired!')
-    
+
+print(Timer)
 Timer(60,(150,150), done)
 myapp.run(Timer.step)
