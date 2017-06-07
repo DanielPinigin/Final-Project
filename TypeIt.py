@@ -84,7 +84,7 @@ class Timer(Sprite):
     def __init__(self, startvalue, position, expired):
         self.startvalue = startvalue
         self.starttime = time.time()
-        startasset = TextAsset("{0}".format(startvalue), style='50px Arial')
+        startasset = TextAsset("{0}".format(startvalue), style='100px Arial')
         super.__init__(startasset,position)
         self.expired = expired
         "{0}".format(startvalue)
@@ -120,5 +120,5 @@ checker((100,100))
 def done():
     print('Timer Expired!')
     
-timer = Timer(60,(50,50), done)
-myapp.run(timer.step)
+Timer(60,(150,150), done)
+myapp.run(Timer.step)
