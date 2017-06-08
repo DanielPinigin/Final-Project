@@ -91,10 +91,10 @@ class FindGame(App):
     def key(event):
         if event.key == worldlist[self.index]:
             self.index += 1
-            x = makegreensprite()
+            makegreensprite()
         else:
             self.index = 0
-            y = makegreenspritegoaway
+            makegreenspritegoaway()
             
 myapp = FindGame(0,0)
 startTime = time.time()
