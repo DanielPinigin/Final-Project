@@ -81,19 +81,19 @@ class FindGame(App):
         for c in 'abcdefghijklmnopqrstuvwxyz':
             FindGame.listenKeyEvent("keydown", c, self.key)
     
-    def makegreensprite():
+    def makegreensprite(self):
         print('Makegreensprite')
         pass
-    def makegreenspritegoaway():
+    def makegreenspritegoaway(self):
         print('MakeGreenSpriteGoAway')
         pass
-    def key(event):
+    def key(self,event):
         if event.key == worldlist[self.index]:
             self.index += 1
-            makegreensprite()
+            self.makegreensprite()
         else:
             self.index = 0
-            makegreenspritegoaway()
+            self.makegreenspritegoaway()
             
 myapp = FindGame(0,0)
 startTime = time.time()
