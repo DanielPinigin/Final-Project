@@ -71,6 +71,7 @@ class FindGame(App):
         black = Color(0, 1)
         noline = LineStyle(0, black)
         asset = ImageAsset("images/starfield.jpg")
+        self.index = 0
         for x in range(self.width//512 + 1):
             for y in range(self.height//512 + 1):
                 Sprite(asset,(x*512, y*512))
@@ -80,19 +81,19 @@ class FindGame(App):
     for c in 'abcdefghijklmnopqrstuvwxyz':
         FindGame.listenKeyEvent("keydown", c, key)
     index = 0
-    self.index = 0
-    def makegreensprite
+    
+    def makegreensprite():
         print('Makegreensprite')
         pass
-    def makegreenspritegoaway
+    def makegreenspritegoaway():
         print('MakeGreenSpriteGoAway')
         pass
     def key(event):
-        if event.key == worldlist[index]:
-            index += 1
+        if event.key == worldlist[self.index]:
+            self.index += 1
             x = makegreensprite()
         else:
-            index = 0
+            self.index = 0
             y = makegreenspritegoaway
             
 myapp = FindGame(0,0)
