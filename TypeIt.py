@@ -77,7 +77,24 @@ class FindGame(App):
         global SCREEN_WIDTH,SCREEN_HEIGHT
         SCREEN_WIDTH = self.width
         SCREEN_HEIGHT = self.height
-        
+    for c in 'abcdefghijklmnopqrstuvwxyz':
+        FindGame.listenKeyEvent("keydown", c, key)
+    index = 0
+    self.index = 0
+    def makegreensprite
+        print('Makegreensprite')
+        pass
+    def makegreenspritegoaway
+        print('MakeGreenSpriteGoAway')
+        pass
+    def key(event):
+        if event.key == worldlist[index]:
+            index += 1
+            x = makegreensprite()
+        else:
+            index = 0
+            y = makegreenspritegoaway
+            
 myapp = FindGame(0,0)
 startTime = time.time()
 class Timer(Sprite):
