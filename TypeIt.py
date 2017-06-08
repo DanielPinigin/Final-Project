@@ -78,9 +78,8 @@ class FindGame(App):
         global SCREEN_WIDTH,SCREEN_HEIGHT
         SCREEN_WIDTH = self.width
         SCREEN_HEIGHT = self.height
-    for c in 'abcdefghijklmnopqrstuvwxyz':
-        FindGame.listenKeyEvent("keydown", c, key)
-    index = 0
+        for c in 'abcdefghijklmnopqrstuvwxyz':
+            FindGame.listenKeyEvent("keydown", c, self.key)
     
     def makegreensprite():
         print('Makegreensprite')
