@@ -88,7 +88,7 @@ class FindGame(App):
         print('MakeGreenSpriteGoAway')
         pass
     def key(self,event):
-        if event.key == worldlist[self.index]:
+        if event.key == wordlist[self.index]:
             self.index += 1
             self.makegreensprite()
         else:
