@@ -81,9 +81,9 @@ class FindGame(App):
         for c in 'abcdefghijklmnopqrstuvwxyz':
             FindGame.listenKeyEvent("keydown", c, self.key)
     def makegreensprite(self):
-        print('Makegreensprite')
         checker((200+(50*self.index),100))
-        checker((150,150))
+        print('Makegreensprite')
+        
     def makegreenspritegoaway(self):
         print('MakeGreenSpriteGoAway')
         pass
@@ -130,7 +130,7 @@ class quest(Sprite):
         quest1 = b
         
 quest((612,342))
-#checker((100,100))
+checker((100,100))
 #checker((200+(50*myapp.index),100))
 
 def done():
