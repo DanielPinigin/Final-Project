@@ -72,18 +72,18 @@ class FindGame(App):
         noline = LineStyle(0, black)
         asset = ImageAsset("images/starfield.jpg")
         self.index = 0
-        for x in range(self.width//512 + 1):
-            for y in range(self.height//512 + 1):
-                Sprite(asset,(x*512, y*512))
+        #for x in range(self.width//512 + 1):
+            #for y in range(self.height//512 + 1):
+                #Sprite(asset,(x*512, y*512))
         global SCREEN_WIDTH,SCREEN_HEIGHT
         SCREEN_WIDTH = self.width
         SCREEN_HEIGHT = self.height
         for c in 'abcdefghijklmnopqrstuvwxyz':
             FindGame.listenKeyEvent("keydown", c, self.key)
-    
     def makegreensprite(self):
         print('Makegreensprite')
-        pass
+        checker((200+(50*self.index),100))
+        checker((150,150))
     def makegreenspritegoaway(self):
         print('MakeGreenSpriteGoAway')
         pass
@@ -119,10 +119,8 @@ class checker(Sprite):
     height = 50
     def __init__(self, position):
         super().__init__(checker.asset, position)
-        #self.x = random.randint(0,SCREEN_WIDTH)
-        #self.y = random.randint(0,SCREEN_HEIGHT)
         self.scale = .05
-    
+        
 class quest(Sprite):
     asset = Quest
     width = 70
@@ -132,7 +130,8 @@ class quest(Sprite):
         quest1 = b
         
 quest((612,342))
-checker((100,100))
+#checker((100,100))
+#checker((200+(50*myapp.index),100))
 
 def done():
     print('Timer Expired!')
