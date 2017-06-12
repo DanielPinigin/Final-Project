@@ -61,7 +61,7 @@ def createWord2():
     wordList= ("".join(wordList))
     print(wordList)
 b = list(a)
-createWord2()
+#createWord2()
 Quest=TextAsset(wordList, style='100px Arial')
 class FindGame(App):
     def __init__(self, width, height):
@@ -95,6 +95,13 @@ class FindGame(App):
             self.makegreensprite()
         else:
             self.index = 0
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
             self.makegreenspritegoaway()
             
     def step(self):
