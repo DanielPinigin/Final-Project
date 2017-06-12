@@ -84,9 +84,10 @@ class FindGame(App):
         checker((200+(100*self.index),100))
         if self.index == 10:
             print(self.getSpritesbyClass(checker), len(self.getSpritesbyClass(checker)))
-            for x in self.getSpritesbyClass(checker):
+            for x in self.getSpritesbyClass(checker)[:]:
                 x.destroy()
                 print('hi')
+            self.index = 0
             createWord2()
         print('Makegreensprite')
         
