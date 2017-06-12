@@ -107,6 +107,7 @@ class Timer(Sprite):
         "{0}".format(startvalue)
     
     def step(self):
+        pass
         if time.timer() > self.starttime+1:
             if self.startvalue == 1:
                 self.expire()
@@ -137,5 +138,6 @@ def done():
     print('Timer Expired!')
 
 print(Timer)
-Timer(60,(150,150), done)
-myapp.run(Timer.step)
+timer = Timer(60,(150,150), done)
+#myapp.run(timer.step)
+myapp.run()
