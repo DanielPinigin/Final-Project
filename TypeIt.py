@@ -83,9 +83,11 @@ class FindGame(App):
     def makegreensprite(self):
         checker((200+(100*self.index),100))
         if self.index == 10:
+            print(self.getSpritesbyClass(checker), len(self.getSpritesbyClass(checker)))
             for x in self.getSpritesbyClass(checker):
                 x.destroy()
-                createWord2()
+                print('hi')
+            createWord2()
         print('Makegreensprite')
         
     def makegreenspritegoaway(self):
