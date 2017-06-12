@@ -85,6 +85,8 @@ class FindGame(App):
         print('Makegreensprite')
         
     def makegreenspritegoaway(self):
+        for x in self.getSpritesbyClass(checker):
+            x.destroy()
         print('MakeGreenSpriteGoAway')
         pass
     def key(self,event):
