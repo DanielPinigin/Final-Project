@@ -82,7 +82,7 @@ class FindGame(App):
             FindGame.listenKeyEvent("keydown", c, self.key)
     def makegreensprite(self):
         checker((200+(100*self.index),100))
-        if self.index = 10
+        if self.index == 10:
             for x in self.getSpritesbyClass(checker):
                 x.destroy()
                 createWord2()
