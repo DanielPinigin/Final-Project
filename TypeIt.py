@@ -61,7 +61,7 @@ def createWord2():
     wordList= ("".join(wordList))
     print(wordList)
 b = list(a)
-#createWord2()
+createWord2()
 Quest=TextAsset(wordList, style='100px Arial')
 class FindGame(App):
     def __init__(self, width, height):
@@ -82,6 +82,10 @@ class FindGame(App):
             FindGame.listenKeyEvent("keydown", c, self.key)
     def makegreensprite(self):
         checker((200+(100*self.index),100))
+        if self.index = 10
+            for x in self.getSpritesbyClass(checker):
+                x.destroy()
+                createWord2()
         print('Makegreensprite')
         
     def makegreenspritegoaway(self):
