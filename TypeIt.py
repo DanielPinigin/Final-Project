@@ -95,6 +95,9 @@ class FindGame(App):
             self.index = 0
             self.makegreenspritegoaway()
             
+    def step(self):
+        pass
+            
 myapp = FindGame(0,0)
 startTime = time.time()
 class Timer(Sprite):
