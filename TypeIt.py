@@ -34,6 +34,7 @@ class FindGame(App):
         asset = ImageAsset("images/starfield.jpg")
         self.index = 0
         self.point = 0
+        pointList = 0
         self.timerList=[]
         self.timer=60
         self.currentTime = time.time()
@@ -60,6 +61,12 @@ class FindGame(App):
             quest((612,342))
             print(self.point)
             self.index = 0
+            if len(self.point)>0:
+                for x in self.pointList:
+                    x.destroy()
+            tadaAsset = TextAsset(self.point, style='100px Arial')
+            self.pointList=[]
+            self.pointList.append(Sprite(tadaAsset, (self.width/2, 50)))
         print('Makegreensprite')
         
     def makegreenspritegoaway(self):
@@ -71,6 +78,7 @@ class FindGame(App):
         if event.key == wordList[self.index]:
             self.index += 1
             self.makegreensprite()
+        
         else:
             self.index = 0
             self.point -= 2
@@ -94,13 +102,6 @@ class FindGame(App):
                     x.destroy()
             self.timerList=[]
             self.timerList.append(Sprite(timerAsset, (self.width/2, 20)))
-        else:
-            if len(self.pointList)>1:
-                for x in self.pointList:
-                    x.destroy()
-            tadaAsset = TextAsset(self.point, style='100px Arial')
-            self.pointList=[]
-            self.pointList.append(Sprite(tadaAsset, (self.width/2, 50)))
             
 myapp = FindGame(0,0)
 startTime = time.time()
