@@ -48,21 +48,25 @@ SCREEN_WIDTH = 0
 SCREEN_HEIGHT = 0
 a= random.choice('abcdefghijklmnopqrstuvwxyz')
 wordList = []
+Quest=0
 def createWord():
     global wordList
     wordList.append(random.choice('abcdefghijklmnopqrstuvwxyz'))
     print(wordList)
 def createWord2():
-    global wordList
+    global wordList, Quest
     wordList=[]
     
     for _ in range(10):
         createWord()
     wordList= ("".join(wordList))
     print(wordList)
+    Quest=TextAsset(wordList, style='100px Arial')
+    print(Quest)
 b = list(a)
 createWord2()
-Quest=TextAsset(wordList, style='100px Arial')
+print(createWord)
+
 class FindGame(App):
     def __init__(self, width, height):
         self.width=width
@@ -72,6 +76,9 @@ class FindGame(App):
         noline = LineStyle(0, black)
         asset = ImageAsset("images/starfield.jpg")
         self.index = 0
+        self.timerList=[]
+        self.timer=60
+        self.currentTime = time.time()
         for x in range(self.width//512 + 1):
             for y in range(self.height//512 + 1):
                 Sprite(asset,(x*512, y*512))
@@ -91,7 +98,8 @@ class FindGame(App):
                 x.destroy()
                 print('ye')
             createWord2()
-            quest((612,342))
+            quest((100,100))
+            
             self.index = 0
         print('Makegreensprite')
         
@@ -116,7 +124,20 @@ class FindGame(App):
             self.makegreenspritegoaway()
             
     def step(self):
-        pass
+        if self.timer != 1:
+            if time.time()-self.currentTime>1:
+                self.currentTime=time.time()
+                timerAsset= TextAsset(self.timer)
+                self.timer-=1
+                if len(self.timerList)>0:
+                    for x in self.timerList:
+                        x.destroy()
+                self.timerList=[]
+                self.timerList.append(Sprite(timerAsset, (self.width/2, 20)))
+        else:
+            print('over')
+                    
+            
             
 myapp = FindGame(0,0)
 startTime = time.time()
@@ -146,6 +167,8 @@ class checker(Sprite):
         self.scale = .05
         
 class quest(Sprite):
+    global Quest
+    print(Quest)
     asset = Quest
     width = 70
     height = 50
