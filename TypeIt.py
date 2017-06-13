@@ -1,47 +1,5 @@
 #Impot ggame stuff
-"""
-Make Sprite which shows how many characters you've gotten correct of the word so far
-When an image is displayed, it requires the user to type its characters
-the characters must be typed in order that appear in the list of that word
-if the incorrect character is typed, reset all progress on the current word
-every time you type the correct character in the list, a green dot sprite will be created on the screen, 
-one for each character
-once the user types all the characters, the image is changed to the next image and demands that a new list is typed
-When you type a letter, first checks if that is the correct letter in the list
-See if you can do time so player has 60s to get as far as possible
-find way to center text as word increases in size
-time.time() the number of seconds since january 1970
-    FindGame.listenKeyEvent("keydown", "q", qkey)
-    FindGame.listenKeyEvent("keydown", "w", wkey)
-    FindGame.listenKeyEvent("keydown", "e", ekey)
-    FindGame.listenKeyEvent("keydown", "r", rkey)
-    FindGame.listenKeyEvent("keydown", "t", tkey)
-    FindGame.listenKeyEvent("keydown", "y", ykey)
-    FindGame.listenKeyEvent("keydown", "u", ukey)
-    FindGame.listenKeyEvent("keydown", "i", ikey)
-    FindGame.listenKeyEvent("keydown", "o", okey)
-    FindGame.listenKeyEvent("keydown", "p", pkey)
-    FindGame.listenKeyEvent("keydown", "w", wkey)
-    FindGame.listenKeyEvent("keydown", "a", akey)
-    FindGame.listenKeyEvent("keydown", "s", skey)
-    FindGame.listenKeyEvent("keydown", "d", dkey)
-    FindGame.listenKeyEvent("keydown", "f", fkey)
-    FindGame.listenKeyEvent("keydown", "g", gkey)
-    FindGame.listenKeyEvent("keydown", "h", hkey)
-    FindGame.listenKeyEvent("keydown", "j", jkey)
-    FindGame.listenKeyEvent("keydown", "k", kkey)
-    FindGame.listenKeyEvent("keydown", "l", lkey)
-    FindGame.listenKeyEvent("keydown", "z", zkey)
-    FindGame.listenKeyEvent("keydown", "x", xkey)
-    FindGame.listenKeyEvent("keydown", "c", ckey)
-    FindGame.listenKeyEvent("keydown", "v", vkey)
-    FindGame.listenKeyEvent("keydown", "b", bkey)
-    FindGame.listenKeyEvent("keydown", "n", nkey)
-    FindGame.listenKeyEvent("keydown", "m", mkey)
-    random.choice(['a','b', etc])
-    for _ in range(5):
-        create()
-"""
+
 import random, time
 from ggame import App, RectangleAsset, ImageAsset, Sprite, LineStyle, Color, Frame, TextAsset
 SCREEN_WIDTH = 0
@@ -75,6 +33,7 @@ class FindGame(App):
         noline = LineStyle(0, black)
         asset = ImageAsset("images/starfield.jpg")
         self.index = 0
+        self.point = 0
         self.timerList=[]
         self.timer=60
         self.currentTime = time.time()
@@ -112,9 +71,11 @@ class FindGame(App):
     def key(self,event):
         if event.key == wordList[self.index]:
             self.index += 1
+            self.point += 100
             self.makegreensprite()
         else:
             self.index = 0
+            self.point -= 20
             self.makegreenspritegoaway()
             self.makegreenspritegoaway()
             self.makegreenspritegoaway()
@@ -126,7 +87,6 @@ class FindGame(App):
             
     def step(self):
         if self.timer != 1:
-            print('hey', time.time()-self.currentTime)
             if time.time()-self.currentTime>1:
                 self.currentTime=time.time()
                 timerAsset= TextAsset(self.timer, color=Color(0x9acd32, 1))
