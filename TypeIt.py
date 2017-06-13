@@ -88,6 +88,8 @@ class FindGame(App):
                 x.destroy()
                 print('hi')
             self.index = 0
+            for x in self.getSpritesbyClass(createWord2)[:]:
+                x.destroy()
             createWord2()
         print('Makegreensprite')
         
