@@ -49,8 +49,8 @@ class FindGame(App):
             FindGame.listenKeyEvent("keydown", c, self.key)
     def makegreensprite(self):
         checker((200+(100*self.index),100))
-        self.point += 10
         if self.index == 10:
+            self.point += 10
             print(self.getSpritesbyClass(checker), len(self.getSpritesbyClass(checker)))
             for x in self.getSpritesbyClass(checker)[:]:
                 x.destroy()
@@ -75,13 +75,7 @@ class FindGame(App):
         else:
             self.index = 0
             self.makegreenspritegoaway()
-            self.makegreenspritegoaway()
-            self.makegreenspritegoaway()
-            self.makegreenspritegoaway()
-            self.makegreenspritegoaway()
-            self.makegreenspritegoaway()
-            self.makegreenspritegoaway()
-            self.makegreenspritegoaway()
+
             
     def step(self):
         if self.timer != 1:
