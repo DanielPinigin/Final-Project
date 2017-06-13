@@ -78,19 +78,18 @@ class FindGame(App):
 
             
     def step(self):
-        if self.timer != 1:
-            if time.time()-self.currentTime>1:
-                self.currentTime=time.time()
-                timerAsset= TextAsset(self.timer, color=Color(0x9acd32, 1))
-                self.timer-=1
-                if len(self.timerList)>0:
-                    for x in self.timerList:
-                        x.destroy()
-                self.timerList=[]
-                self.timerList.append(Sprite(timerAsset, (self.width/2, 20)))
+        
+        if time.time()-self.currentTime>1:
+            self.currentTime=time.time()
+            timerAsset= TextAsset(self.timer, color=Color(0x9acd32, 1))
+            self.timer-=1
+            if len(self.timerList)>0:
+                for x in self.timerList:
+                    x.destroy()
+            self.timerList=[]
+            self.timerList.append(Sprite(timerAsset, (self.width/2, 20)))
         else:
-            print('over')
-                    
+            tadaAsset = TextAsset(self.point, style='100px Arial')
             
             
 myapp = FindGame(0,0)
