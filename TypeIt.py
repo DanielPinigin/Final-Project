@@ -72,9 +72,9 @@ class FindGame(App):
         noline = LineStyle(0, black)
         asset = ImageAsset("images/starfield.jpg")
         self.index = 0
-        #for x in range(self.width//512 + 1):
-            #for y in range(self.height//512 + 1):
-                #Sprite(asset,(x*512, y*512))
+        for x in range(self.width//512 + 1):
+            for y in range(self.height//512 + 1):
+                Sprite(asset,(x*512, y*512))
         global SCREEN_WIDTH,SCREEN_HEIGHT
         SCREEN_WIDTH = self.width
         SCREEN_HEIGHT = self.height
@@ -87,10 +87,12 @@ class FindGame(App):
             for x in self.getSpritesbyClass(checker)[:]:
                 x.destroy()
                 print('hi')
-            self.index = 0
-            for x in self.getSpritesbyClass(createWord2)[:]:
+            for x in self.getSpritesbyClass(quest):
                 x.destroy()
+                print('ye')
             createWord2()
+            quest((612,342))
+            self.index = 0
         print('Makegreensprite')
         
     def makegreenspritegoaway(self):
