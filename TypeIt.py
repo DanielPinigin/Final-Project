@@ -49,21 +49,21 @@ class FindGame(App):
             FindGame.listenKeyEvent("keydown", c, self.key)
     def makegreensprite(self):
         checker((200+(100*self.index),100))
+        self.point += 10
         if self.index == 10:
             print(self.getSpritesbyClass(checker), len(self.getSpritesbyClass(checker)))
             for x in self.getSpritesbyClass(checker)[:]:
                 x.destroy()
-                print('hi')
             for x in self.getSpritesbyClass(quest):
                 x.destroy()
-                print('ye')
             createWord2()
             quest((612,342))
-            
+            print(self.point)
             self.index = 0
         print('Makegreensprite')
         
     def makegreenspritegoaway(self):
+        self.point -= 2
         for x in self.getSpritesbyClass(checker):
             x.destroy()
         print('MakeGreenSpriteGoAway')
@@ -71,11 +71,9 @@ class FindGame(App):
     def key(self,event):
         if event.key == wordList[self.index]:
             self.index += 1
-            self.point += 100
             self.makegreensprite()
         else:
             self.index = 0
-            self.point -= 20
             self.makegreenspritegoaway()
             self.makegreenspritegoaway()
             self.makegreenspritegoaway()
