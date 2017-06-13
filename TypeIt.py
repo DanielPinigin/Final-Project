@@ -97,7 +97,7 @@ class FindGame(App):
                 x.destroy()
                 print('ye')
             createWord2()
-            quest((100,100))
+            quest((612,342))
             
             self.index = 0
         print('Makegreensprite')
