@@ -63,7 +63,6 @@ class FindGame(App):
         print('Makegreensprite')
         
     def makegreenspritegoaway(self):
-        self.point -= 2
         for x in self.getSpritesbyClass(checker):
             x.destroy()
         print('MakeGreenSpriteGoAway')
@@ -74,6 +73,13 @@ class FindGame(App):
             self.makegreensprite()
         else:
             self.index = 0
+            self.point -= 2
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
+            self.makegreenspritegoaway()
             self.makegreenspritegoaway()
 
             
