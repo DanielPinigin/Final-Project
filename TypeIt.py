@@ -84,7 +84,7 @@ class FindGame(App):
 
             
     def step(self):
-        
+        time.time()-self.currentTime!=-1
         if time.time()-self.currentTime>1:
             self.currentTime=time.time()
             timerAsset= TextAsset(self.timer, color=Color(0x9acd32, 1))
@@ -98,6 +98,9 @@ class FindGame(App):
             tadaAsset = TextAsset(self.point, style='100px Arial')
             self.pointList=[]
             self.pointList.append(Sprite(tadaAsset, (self.width/2, 50)))
+            if len(self.pointList)>1:
+                for x in self.pointList:
+                    x.destroy()
             
 myapp = FindGame(0,0)
 startTime = time.time()
