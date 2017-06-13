@@ -65,7 +65,6 @@ def createWord2():
     print(Quest)
 b = list(a)
 createWord2()
-print(createWord)
 
 class FindGame(App):
     def __init__(self, width, height):
@@ -176,6 +175,9 @@ class quest(Sprite):
         super().__init__(quest.asset, position)
         quest1 = b
         
+#class questy(quest):
+    
+  
 quest((612,342))
 #checker((100,100))
 #checker((200+(50*myapp.index),100))
