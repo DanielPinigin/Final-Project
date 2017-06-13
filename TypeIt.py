@@ -172,7 +172,7 @@ class quest(Sprite):
     width = 70
     height = 50
     def __init__(self, position):
-        super().__init__(quest.asset, position)
+        super().__init__(Quest, position)
         quest1 = b
         
 #class questy(quest):
