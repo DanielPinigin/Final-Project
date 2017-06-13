@@ -96,7 +96,8 @@ class FindGame(App):
             self.timerList.append(Sprite(timerAsset, (self.width/2, 20)))
         else:
             tadaAsset = TextAsset(self.point, style='100px Arial')
-            
+            self.pointList=[]
+            self.pointList.append(Sprite(tadaAsset, (self.width/2, 50)))
             
 myapp = FindGame(0,0)
 startTime = time.time()
