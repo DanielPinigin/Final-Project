@@ -78,9 +78,11 @@ class FindGame(App):
         self.timerList=[]
         self.timer=60
         self.currentTime = time.time()
+        """
         for x in range(self.width//512 + 1):
             for y in range(self.height//512 + 1):
                 Sprite(asset,(x*512, y*512))
+        """
         global SCREEN_WIDTH,SCREEN_HEIGHT
         SCREEN_WIDTH = self.width
         SCREEN_HEIGHT = self.height
@@ -124,9 +126,10 @@ class FindGame(App):
             
     def step(self):
         if self.timer != 1:
+            print('hey', time.time()-self.currentTime)
             if time.time()-self.currentTime>1:
                 self.currentTime=time.time()
-                timerAsset= TextAsset(self.timer)
+                timerAsset= TextAsset(self.timer, color=Color(0x9acd32, 1))
                 self.timer-=1
                 if len(self.timerList)>0:
                     for x in self.timerList:
