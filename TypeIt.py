@@ -55,6 +55,7 @@ class FindGame(App):
                 x.destroy()
             for x in self.getSpritesbyClass(quest):
                 x.destroy()
+            
             createWord2()
             quest((612,342))
             print(self.point)
@@ -129,7 +130,12 @@ class checker(Sprite):
     def __init__(self, position):
         super().__init__(checker.asset, position)
         self.scale = .05
-        
+
+class back(Sprite):
+    def __init__(self):
+        for x in range(self.width//600 + 1):
+            for y in range(self.height//360 + 1):
+                Sprite(asset,(x*600, y*360))
 class quest(Sprite):
     global Quest
     print(Quest)
