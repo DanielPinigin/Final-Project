@@ -50,22 +50,15 @@ class FindGame(App):
         checker((200+(100*self.index),100))
         if self.index == 10:
             self.point += 10
-            self.point = str(self.point)
             print(self.getSpritesbyClass(checker), len(self.getSpritesbyClass(checker)))
             for x in self.getSpritesbyClass(checker)[:]:
                 x.destroy()
             for x in self.getSpritesbyClass(quest):
                 x.destroy()
                 print('fun')
-            for x in self.point:
-                x.destroy()
             createWord2()
             quest((612,342))
-            print(self.point)
             self.index = 0
-            if len(self.point)>0:
-                for x in self.pointList:
-                    x.destroy()
             tadaAsset = TextAsset(self.point, style='100px Arial')
             self.pointList=[]
             self.pointList.append(Sprite(tadaAsset, (self.width/2, 50)))
