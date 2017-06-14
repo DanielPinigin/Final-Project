@@ -49,7 +49,7 @@ class FindGame(App):
         for c in 'abcdefghijklmnopqrstuvwxyz':
             FindGame.listenKeyEvent("keydown", c, self.key)
     def makegreensprite(self):
-        checker((200+(100*self.index),100))
+        checker((200+(100*self.index),200))
         if self.index == 10:
             self.point += 10
             self.update()
@@ -92,7 +92,7 @@ class FindGame(App):
             
     def step(self):
         if self.timer>0:
-            if time.time()-self.currentTime>1:
+            if time.time()-self.currentTime>0:
                 self.currentTime=time.time()
                 timerAsset= TextAsset(self.timer, color=Color(0x9acd32, 1))
                 self.timer-=1
