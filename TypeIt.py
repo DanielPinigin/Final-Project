@@ -58,6 +58,7 @@ class FindGame(App):
                 print('fun')
             createWord2()
             quest((612,342))
+            print(self.point)
             self.index = 0
             tadaAsset = TextAsset(self.point, style='100px Arial')
             self.pointList=[]
