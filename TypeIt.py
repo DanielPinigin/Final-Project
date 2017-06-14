@@ -91,8 +91,7 @@ class FindGame(App):
 
             
     def step(self):
-        if self.timer<1:
-            self.end=True
+        if self.timer>0:
             if time.time()-self.currentTime>1:
                 self.currentTime=time.time()
                 timerAsset= TextAsset(self.timer, color=Color(0x9acd32, 1))
@@ -102,6 +101,8 @@ class FindGame(App):
                         x.destroy()
                 self.timerList=[]
                 self.timerList.append(Sprite(timerAsset, (self.width/2, 20)))
+        else:
+            self.end=True
         
             
             
