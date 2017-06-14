@@ -72,7 +72,7 @@ class FindGame(App):
         print('MakeGreenSpriteGoAway')
         pass
     def key(self,event):
-        if self.end=False:
+        if self.end==False:
             if event.key == wordList[self.index]:
                 self.index += 1
                 self.makegreensprite()
