@@ -35,7 +35,7 @@ class FindGame(App):
         self.index = 0
         self.point = 0
         self.update()
-        pointList = 0
+        self.pointList = []
         self.timerList=[]
         self.timer=60
         self.currentTime = time.time()
