@@ -92,7 +92,7 @@ class FindGame(App):
             
     def step(self):
         if self.timer>0:
-            if time.time()-self.currentTime>0:
+            if time.time()-self.currentTime>1:
                 self.currentTime=time.time()
                 timerAsset= TextAsset(self.timer, color=Color(0x9acd32, 1))
                 self.timer-=1
