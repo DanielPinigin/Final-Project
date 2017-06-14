@@ -31,18 +31,16 @@ class FindGame(App):
         super().__init__(width, height)
         black = Color(0, 1)
         noline = LineStyle(0, black)
-        asset = ImageAsset("images/starfield.jpg")
+        asset = ImageAsset("blue.png")
         self.index = 0
         self.point = 0
         pointList = 0
         self.timerList=[]
         self.timer=60
         self.currentTime = time.time()
-        """
-        for x in range(self.width//512 + 1):
-            for y in range(self.height//512 + 1):
-                Sprite(asset,(x*512, y*512))
-        """
+        for x in range(self.width//600 + 1):
+            for y in range(self.height//360 + 1):
+                Sprite(asset,(x*600, y*360))
         global SCREEN_WIDTH,SCREEN_HEIGHT
         SCREEN_WIDTH = self.width
         SCREEN_HEIGHT = self.height
@@ -61,9 +59,11 @@ class FindGame(App):
             quest((612,342))
             print(self.point)
             self.index = 0
+            """
             if len(self.point)>0:
                 for x in self.pointList:
                     x.destroy()
+                    """
             tadaAsset = TextAsset(self.point, style='100px Arial')
             self.pointList=[]
             self.pointList.append(Sprite(tadaAsset, (self.width/2, 50)))
