@@ -34,8 +34,9 @@ class FindGame(App):
         asset = ImageAsset("blue.png")
         self.index = 0
         self.point = 0
-        self.update()
         self.pointList = []
+        self.end=False
+        
         self.timerList=[]
         self.timer=60
         self.currentTime = time.time()
@@ -71,9 +72,10 @@ class FindGame(App):
         print('MakeGreenSpriteGoAway')
         pass
     def key(self,event):
-        if event.key == wordList[self.index]:
-            self.index += 1
-            self.makegreensprite()
+        if self.end=False:
+            if event.key == wordList[self.index]:
+                self.index += 1
+                self.makegreensprite()
         
         else:
             self.index = 0
@@ -89,7 +91,6 @@ class FindGame(App):
 
             
     def step(self):
-        time.time()-self.currentTime!=-1
         if time.time()-self.currentTime>1:
             self.currentTime=time.time()
             timerAsset= TextAsset(self.timer, color=Color(0x9acd32, 1))
@@ -99,6 +100,9 @@ class FindGame(App):
                     x.destroy()
             self.timerList=[]
             self.timerList.append(Sprite(timerAsset, (self.width/2, 20)))
+        if self.timer<1:
+            self.end=True
+            
     def update(self):
         tadaAsset = TextAsset(self.point, style='100px Arial')
         if len(self.pointList)>0:
@@ -157,4 +161,5 @@ def done():
 print(Timer)
 timer = Timer(60,(150,150), done)
 #myapp.run(timer.step)
+myapp.update()
 myapp.run()
