@@ -100,7 +100,7 @@ class FindGame(App):
                     for x in self.timerList:
                         x.destroy()
                 self.timerList=[]
-                self.timerList.append(Sprite(timerAsset, (self.width/2, 20)))
+                self.timerList.append(Sprite(timerAsset, (self.width/2, 500)))
         else:
             self.end=True
         
